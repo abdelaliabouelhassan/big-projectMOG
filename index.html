@@ -12,17 +12,58 @@
     <script src="js/index.js"></script>
 </head>
 <body>
-    <div>
-        <form action="#">
-        <input type="text" name="firstname" placeholder="First Name" id=""><br>
-        <input type="text" name="lastname" placeholder="Last Name" id=""><br>
-        <input type="email" name="email" placeholder="email" id=""><br>
-        <input type="email" name="email2" placeholder="Confirm Email" id=""><br>
-        <input type="password" name="password" placeholder="Password" id=""><br>
-        <input type="password" name="password2" placeholder="Confirm password2" id=""><br>
-        <input type="submit" value="register">
-       </form>
-    </div>
+        <nav id="navbar-example2" class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">MEET GAMERS</a>
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#fat">Register</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#mdo">Game Library</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">more..</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#one">Rewards</a>
+                      <a class="dropdown-item" href="#two">Articles</a>
+                      <div role="separator" class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#three">about MG</a>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+                <h4 id="fat"> </h4> <!-- hna andir name libghit imchi liha  -->
+                            <div class="">
+                                    <form action="#">
+                                    <input type="text" name="firstname" placeholder="First Name" id=""><br>
+                                    <input type="text" name="lastname" placeholder="Last Name" id=""><br>
+                                    <input type="email" name="email" placeholder="email" id=""><br>
+                                    <input type="email" name="email2" placeholder="Confirm Email" id=""><br>
+                                    <input type="password" name="password" placeholder="Password" id=""><br>
+                                    <input type="password" name="password2" placeholder="Confirm password2" id=""><br>
+                                            <select class="" id="">
+                                            <option selected>Your Gender</option>
+                                            <option value="1">male</option>
+                                            <option value="2">female</option>
+                                            </select><br>
+                                            <input type="date" name="" id=""><br>
+                                    <input type="submit" value="Sign up">
+                                    
+                                </form>
+                                </div>
+                    
+                <h4 id="mdo"> </h4>
+                <p> </p>
+                <h4 id="one"> </h4>
+                <p> </p>
+                <h4 id="two"> </h4>
+                <p> </p>
+                <h4 id="three"> </h4>
+                <p> </p>
+              </div>
+              
+
     
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
