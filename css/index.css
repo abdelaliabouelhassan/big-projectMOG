@@ -1,3 +1,9 @@
+/* 1 */
+/* 1 */
+/* 1 */
+/* 1 */
+/* 1 */
+/* 1 */
 /* style dyal header */
 .maindiv{
     background-image: url('../images/5ff312d2e564b1442a90602bfa5e6d17.jpg');
@@ -9,6 +15,8 @@ header{
     background-image: url('../images/ZACvjtD.jpg');
     background-attachment: fixed;
     background-size: cover;
+    border-bottom: 5px solid  #f442b6;
+   
 }
 /* hna style dyal logo*/
 #logo1{
@@ -80,10 +88,14 @@ input[type="text"]:hover,input[type="email"]:hover,input[type="password"]:hover 
 }
 #navbar-example2{
     position : fixed;
+    position : relative;
+    /* position :absolute; */
+
 }
 /*HNA STYLE DYAL IMAGES LIMAJMO3IN */
 #carouselExampleIndicators{
     border: 10px solid #EDEDED;
+    
     width: 600px; 
    margin-top: -400px;
    margin-left: 100px;
@@ -105,4 +117,71 @@ input[type="text"]:hover,input[type="email"]:hover,input[type="password"]:hover 
     margin-left: 100px;
    color: #EDEDED;
    font-size: 50px;
+}
+
+
+
+/* 2 */
+/* 2 */
+/* 2 */
+/* 2 */
+/* 2 */
+/* 2 */
+/* style dyal parti tanya */
+
+.part2{
+  
+    background-image: url('../images/g1.jpg') !important;
+    background-attachment: fixed;
+    background-size: cover;
+    border-bottom: 5px solid  #6a00ff;  
+}
+.part2 h1{
+     text-align: center;
+     color: #ffffff;
+     width: bold;
+     font-size: 100px;
+     padding-top: 50px;
+     box-shadow: inset -1px 0 0 0 rgba(0, 0, 0, 0.165);
+}
+.part2 h2{
+    text-align: center;
+    color: #ff00dc;
+    width: bold;
+}
+.part2 p {
+    text-align: center;
+}
+/* style dyal dyal h2 f bored part2 */
+#bord h2{
+    background-color: #999486;
+    border: 1px solid #EDEDED;
+    border-radius: 7px;
+    padding: 5px;
+    opacity: 0.9;
+    
+}
+#bord p {
+   font-size: 30px;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+}
+/* style dyal border liflkatba f part2 */
+#bord{
+    padding-top: 100px;
+    background-color: #ffffff;
+    border: 1px solid #EDEDED;
+    border-radius: 7px;
+    padding: 5px;
+    opacity: 0.9;
+    width: 25%;
+    margin-top:100px;
+    padding-bottom: 100px;
+}
+/* style dyal icon f part2 */
+.part2 i {
+    font-size: 150px;
+    color: red;
+    text-align: center;
+    margin-left: 130px;
+    margin-top: 80px;
 }
