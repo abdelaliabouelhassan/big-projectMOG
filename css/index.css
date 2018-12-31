@@ -1,7 +1,9 @@
+/* style dyal header */
 .maindiv{
     background-image: url('../images/5ff312d2e564b1442a90602bfa5e6d17.jpg');
     background-attachment: fixed;
     background-size: cover;
+    
 }
 header{
     background-image: url('../images/ZACvjtD.jpg');
@@ -11,11 +13,13 @@ header{
 /* hna style dyal logo*/
 #logo1{
     margin-top: 100px;
-    height: 60px;
-    width: 100px;  
-    position : fixed;
+    margin-left: 60px;
+    height: 200px;
+    width: 400px;  
+   
     background-attachment: fixed;
     background-size: cover;
+    opacity: 1%;
     
 }
 /* hna style dyal register ou login*/
@@ -26,7 +30,7 @@ header{
     text-align: center;
    margin-right: 50px;
    position: relative;
-    
+    margin-top: -500px;
     margin-left: auto;
     top: 7%;
     width: 25%;
@@ -76,4 +80,29 @@ input[type="text"]:hover,input[type="email"]:hover,input[type="password"]:hover 
 }
 #navbar-example2{
     position : fixed;
+}
+/*HNA STYLE DYAL IMAGES LIMAJMO3IN */
+#carouselExampleIndicators{
+    border: 10px solid #EDEDED;
+    width: 600px; 
+   margin-top: -400px;
+   margin-left: 100px;
+   padding-bottom:10px; 
+    position : absolute;
+    position : relative;
+}
+/* style dyal icone */
+.icno i{
+   
+    font-size: 90px;
+    color: red;
+    margin-top: -215px;
+    position : absolute;
+   
+}
+.icno p{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin-left: 100px;
+   color: #EDEDED;
+   font-size: 50px;
 }
