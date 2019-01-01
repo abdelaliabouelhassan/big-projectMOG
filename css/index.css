@@ -113,10 +113,10 @@ input[type="text"]:hover,input[type="email"]:hover,input[type="password"]:hover 
    
 }
 .icno p{
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Lucida Console", Monaco, monospace;
     margin-left: 100px;
    color: #EDEDED;
-   font-size: 50px;
+   font-size: 40px;
 }
 
 
@@ -139,10 +139,11 @@ input[type="text"]:hover,input[type="email"]:hover,input[type="password"]:hover 
 .part2 h1{
      text-align: center;
      color: #ffffff;
-     width: bold;
+     font-weight: bold;
      font-size: 100px;
      padding-top: 50px;
-     box-shadow: inset -1px 0 0 0 rgba(0, 0, 0, 0.165);
+     text-shadow: 2px 3px black;
+     font-weight: bold;
 }
 .part2 h2{
     text-align: center;
@@ -184,4 +185,85 @@ input[type="text"]:hover,input[type="email"]:hover,input[type="password"]:hover 
     text-align: center;
     margin-left: 130px;
     margin-top: 80px;
+}
+
+/* 3 */
+/* 3 */
+/* 3 */
+/* 3 */
+/* 3 */
+/* 3 */
+/* style dyal parti talta */
+
+
+.part3{
+    background-image: url('../images/m4.jpg');
+    border-bottom: 5px solid  #fcf9f9;
+}
+.img1{
+    width: 70%;
+     margin-left: auto;
+     margin-right: auto;
+     display:flex;flex-wrap: wrap;justify-content: space-between;
+     background-color: #7b7e82;
+     border: 5px solid #7b7e82;   
+     opacity: 0.9;  
+}
+.img1 img{
+    border: 2px solid #6a6b6d;
+}
+
+.img1 i{
+    font-size: 40px;
+    color: red;
+    margin-top: 10px;
+    position: absolute;
+}
+.im{
+    background-color: #3d3b3b;
+     border: 10px solid #3d3b3b ;
+}
+.img1 p{
+    margin-left: 60px;
+    color: #9e9a9a;
+}
+
+.img1 img{
+    max-width: 194px;max-height: 260px;width: 100%;
+}
+.part3 h1{
+    color: #f2f2f2;
+  text-align: center;
+  padding-top: 70px;
+  text-shadow: 1px 2px black;
+  font-weight: bold;
+  font-size: 50px;
+}
+.fuk{
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+/* 4 */
+/* 4 */
+/* 4 */
+/* 4 */
+/* 4 */
+/* 4 */
+/* style dyal parti lakhr */
+
+.last{
+    text-align: center;
+    color: black;
+    margin-top: 300px; 
+    background-color: #ffffff;
+    border: 1px solid #EDEDED;
+    padding: 50px;
+    opacity: 0.9;
+}
+.last img{
+    margin-top: -50px;
+    width: 100px;  
+}
+.last p{
+    font-size: 10px;
 }
