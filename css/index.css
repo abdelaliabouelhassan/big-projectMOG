@@ -183,7 +183,7 @@ input[type="text"]:hover,input[type="email"]:hover,input[type="password"]:hover 
     font-size: 150px;
     color: red;
     text-align: center;
-    margin-left: 130px;
+    margin-left: 100px;
     margin-top: 80px;
 }
 
@@ -199,6 +199,8 @@ input[type="text"]:hover,input[type="email"]:hover,input[type="password"]:hover 
 .part3{
     background-image: url('../images/m4.jpg');
     border-bottom: 5px solid  #fcf9f9;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .img1{
     width: 70%;
