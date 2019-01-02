@@ -134,5 +134,15 @@
 }
 
 
-
-
+@media only screen and (max-width:1202px){
+    .icno i {
+        margin-top: -180px;  
+    }
+}
+@media only screen and (max-width:854px){
+    .icno i {
+    font-size: 70px;
+    margin-top: -150px;
+    margin-left: 17px;
+    }
+}
