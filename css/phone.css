@@ -1,0 +1,138 @@
+@media only screen and (max-width: 1201px) {
+    .login {
+        margin-top: -400px;
+    }
+    .icno p {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 1123px) {
+.img1 {
+    width: 80%;
+}   
+}
+
+@media only screen and (max-width:981px) {
+    .img1 {
+        width: 90%;
+    }   
+}
+
+@media only screen and (max-width:874px) {
+    .img1 {
+        width: 100%;
+    }   
+}
+@media only screen and (max-width:786px) {
+    .img1 {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #7b7e82;
+       
+        opacity: 0.9;}
+}
+@media only screen and (max-width:1017px) {
+#carouselExampleIndicators {
+    border: 10px solid #EDEDED;
+    width: 529px;
+    margin-top: -400px;
+    margin-left: 100px;
+    padding-bottom: 10px;
+    position: absolute;
+    position: relative;
+}
+}
+@media only screen and (max-width:963px) {
+
+    #carouselExampleIndicators {
+        border: 10px solid #EDEDED;
+        width: 503px;
+        margin-top: -451px;
+        margin-left: 76px;
+        padding-bottom: 10px;
+        position: absolute;
+        position: relative;
+    }
+    .icno p {
+        font-size: 26px;
+    }
+
+}
+@media only screen and (max-width:854px) {
+
+    #carouselExampleIndicators {
+        border: 10px solid #EDEDED;
+        width: 403px;
+        margin-top: -451px;
+        margin-left: 76px;
+        padding-bottom: 10px;
+        position: absolute;
+        position: relative;
+    }
+    .icno p {
+        font-size: 20px;
+     
+    }
+}
+@media only screen and (max-width:816px){
+    header {
+        width: 823px;
+    }
+    .part2{
+  
+        width: 823px;
+    }
+    .part3{
+        width: 823px;
+    }
+    .maindiv{
+        width: 823px;
+    }
+}
+@media only screen and (max-width:1199px){
+    .part2 i {
+        font-size: 130px;
+        margin-left: 70px;
+    }
+}
+@media only screen and (max-width:992px){
+    .part2 i {
+        font-size: 100px;
+        margin-left: 90px;
+    }
+
+}
+@media only screen and (max-width:991px){
+    .part2 i {
+        font-size: 90px;
+        margin-left: 60px;
+    }
+  #t2{
+      margin-top: 40px;
+  }
+ 
+}
+@media only screen and (max-width:766px){
+    .part2 i {
+        font-size: 60px;
+        margin-left: 50px;
+    }
+ 
+}
+@media only screen and (max-width:575px){
+    #bord{
+        margin-left: 50px;
+    }
+    .part2 i {
+        font-size: 60px;
+        margin-left: 60px;
+    }
+}
+
+
+
+
