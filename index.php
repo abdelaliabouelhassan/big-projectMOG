@@ -1,5 +1,5 @@
 <?php 
-DKHAL XAMP OU VSCODE
+//DKHAL XAMP OU VSCODE
 
  ?>
 <!DOCTYPE html>
