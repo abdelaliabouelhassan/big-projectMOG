@@ -1,3 +1,7 @@
+<?php 
+DKHAL XAMP OU VSCODE
+
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
