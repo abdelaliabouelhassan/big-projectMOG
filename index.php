@@ -1,7 +1,8 @@
 <?php 
-//DKHAL XAMP OU VSCODE
 
-
+require 'config/config.php';///link dyal mysqli
+require 'includes/form_handlers/register_handler.php';///link dyal register
+ 
  ?>
 <!DOCTYPE html>
 <html>
@@ -22,8 +23,33 @@
     <script src="js/index.js"></script>
     <!-- jquery -->
     <script src="assist/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="assets/js/register.js"></script>
 </head>
 <body> 
+
+  
+          <?php  
+
+        if(isset($_POST['register_button'])) {
+          echo '
+          <script>
+
+          $(document).ready(function() {
+            $("#first").hide();
+            $("#second").show();
+          });
+
+          </script>
+
+          ';
+        }
+
+
+        ?>
+
+
+
   <div class="maindiv">
     <header>
         <nav id="navbar-example2" class="navbar navbar-light bg-light">
@@ -60,36 +86,83 @@
 
                <div class="login">
                   <p>Login to get started!</p> 
+                  <form action="#" method="POST">
                     <input type="email" name="" id="" placeholder="Email" required>
                     <input type="password" name="" id="" placeholder="password" required><br>
                     <input type="submit" value="Log In" class="btn btn-outline-primary" required><br>
                     <a href="#">Forgot your password?</a>
+                    </form>
                </div>
-
+      
               <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
                 <h4 id="fat"> </h4> <!-- hna andir name libghit imchi liha  -->
                             <div class="Register">
-                                              <form action="#">
-                                              <p>register to get started!</p>
-                                            <input type="text" name="firstname" placeholder="First Name" id="" required><br>
-                                            <input type="text" name="lastname" placeholder="Last Name" id="" required><br>
-                                            <input type="email" name="email" placeholder="email" id=""><br>
-                                            <input type="email" name="email2" placeholder="Confirm Email" id="" required><br>
-                                            <input type="password" name="password" placeholder="Password" id="" required><br>
-                                            <input type="password" name="password2" placeholder="Confirm password2" id="" required><br>
-                                                    <select class="custom-select" id="" required>
-                                                    <option selected>Your Gender</option>
-                                                    <option value="1">male</option>
-                                                    <option value="2">female</option>
-                                                    </select><br>
+
+
+
+                            <!-- register form -->
+
+
+     <form action="#" method="POST">
+
+
+             <p>register to get started!</p>
+           <input type="text" name="reg_fname" placeholder="First Name" value="<?php 
+					if(isset($_SESSION['reg_fname'])) {
+						echo $_SESSION['reg_fname'];
+					} 
+					?>" required>
+					<br>
+					<?php if(in_array("Your first name must be between 2 and 25 characters<br>", $error_array)) echo "Your first name must be between 2 and 25 characters<br>"; ?>
+					
+					
+					<input type="text" name="reg_lname" placeholder="Last Name" value="<?php 
+					if(isset($_SESSION['reg_lname'])) {
+						echo $_SESSION['reg_lname'];
+					} 
+					?>" required>
+					<br>
+					<?php if(in_array("Your last name must be between 2 and 25 characters<br>", $error_array)) echo "Your last name must be between 2 and 25 characters<br>"; ?>
+
+					<input type="email" name="reg_email" placeholder="Email" value="<?php 
+					if(isset($_SESSION['reg_email'])) {
+						echo $_SESSION['reg_email'];
+					} 
+					?>" required>
+					<br>
+
+					<input type="email" name="reg_email2" placeholder="Confirm Email" value="<?php 
+					if(isset($_SESSION['reg_email2'])) {
+						echo $_SESSION['reg_email2'];
+					} 
+					?>" required>
+					<br>
+					<?php if(in_array("Email already in use<br>", $error_array)) echo "Email already in use<br>"; 
+					else if(in_array("Invalid email format<br>", $error_array)) echo "Invalid email format<br>";
+					else if(in_array("Emails don't match<br>", $error_array)) echo "Emails don't match<br>"; ?>
+
+
+					<input type="password" name="reg_password" placeholder="Password" required>
+					<br>
+					<input type="password" name="reg_password2" placeholder="Confirm Password" required>
+					<br>
+					<?php if(in_array("Your passwords do not match<br>", $error_array)) echo "Your passwords do not match<br>"; 
+					else if(in_array("Your password can only contain english characters or numbers<br>", $error_array)) echo "Your password can only contain english characters or numbers<br>";
+					else if(in_array("Your password must be betwen 5 and 30 characters<br>", $error_array)) echo "Your password must be betwen 5 and 30 characters<br>"; ?>
+               <select class="custom-select" id="" required>
+               <option selected>Your Gender</option>
+                <option value="1">male</option>
+                  <option value="2">female</option>
+                  </select><br>
                                                     
-                                                   <select required id="years" class="custom-select" required="true" date="true" name="year"><option value="0" selected="selected">Year</option><option value="1">2000</option><option value="2">1999</option><option value="3">1998</option><option value="4">1997</option><option value="5">1996</option><option value="6">1995</option><option value="7">1994</option><option value="8">1993</option><option value="9">1992</option><option value="10">1991</option><option value="11">1990</option><option value="12">1989</option><option value="13">1988</option><option value="14">1987</option><option value="15">1986</option><option value="16">1985</option><option value="17">1984</option><option value="18">1983</option><option value="19">1982</option><option value="20">1981</option><option value="21">1980</option><option value="22">1979</option><option value="23">1978</option><option value="24">1977</option><option value="25">1976</option><option value="26">1975</option><option value="27">1974</option><option value="28">1973</option><option value="29">1972</option><option value="30">1971</option><option value="31">1970</option><option value="32">1969</option><option value="33">1968</option><option value="34">1967</option><option value="35">1966</option><option value="36">1965</option><option value="37">1964</option><option value="38">1963</option><option value="39">1962</option><option value="40">1961</option><option value="41">1960</option><option value="42">1959</option><option value="43">1958</option><option value="44">1957</option><option value="45">1956</option><option value="46">1955</option><option value="47">1954</option><option value="48">1953</option><option value="49">1952</option><option value="50">1951</option><option value="51">1950</option><option value="52">1949</option><option value="53">1948</option><option value="54">1947</option><option value="55">1946</option><option value="56">1945</option><option value="57">1944</option><option value="58">1943</option><option value="59">1942</option><option value="60">1941</option><option value="61">1940</option><option value="62">1939</option><option value="63">1938</option><option value="64">1937</option><option value="65">1936</option><option value="66">1935</option><option value="67">1934</option><option value="68">1933</option><option value="69">1932</option><option value="70">1931</option><option value="71">1930</option><option value="72">1929</option><option value="73">1928</option><option value="74">1927</option><option value="75">1926</option><option value="76">1925</option><option value="77">1924</option><option value="78">1923</option><option value="79">1922</option><option value="80">1921</option><option value="81">1920</option></select>
-                                        <select required id="months" class="custom-select" required="true" date="true" name="month"><option value="0" selected="selected">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">Sept</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
-                                        <select required id="days" class="custom-select" required="true" date="true" name="day"><option value="0" selected="selected">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select> <br>
-                                            <input type="submit" value="Sign up" class="btn btn-primary btn-lg btn-block">
-                                            
-                                        </form>
-                                        </div>
+               <select required id="years" class="custom-select" required="true" date="true" name="year"><option value="0" selected="selected">Year</option><option value="1">2000</option><option value="2">1999</option><option value="3">1998</option><option value="4">1997</option><option value="5">1996</option><option value="6">1995</option><option value="7">1994</option><option value="8">1993</option><option value="9">1992</option><option value="10">1991</option><option value="11">1990</option><option value="12">1989</option><option value="13">1988</option><option value="14">1987</option><option value="15">1986</option><option value="16">1985</option><option value="17">1984</option><option value="18">1983</option><option value="19">1982</option><option value="20">1981</option><option value="21">1980</option><option value="22">1979</option><option value="23">1978</option><option value="24">1977</option><option value="25">1976</option><option value="26">1975</option><option value="27">1974</option><option value="28">1973</option><option value="29">1972</option><option value="30">1971</option><option value="31">1970</option><option value="32">1969</option><option value="33">1968</option><option value="34">1967</option><option value="35">1966</option><option value="36">1965</option><option value="37">1964</option><option value="38">1963</option><option value="39">1962</option><option value="40">1961</option><option value="41">1960</option><option value="42">1959</option><option value="43">1958</option><option value="44">1957</option><option value="45">1956</option><option value="46">1955</option><option value="47">1954</option><option value="48">1953</option><option value="49">1952</option><option value="50">1951</option><option value="51">1950</option><option value="52">1949</option><option value="53">1948</option><option value="54">1947</option><option value="55">1946</option><option value="56">1945</option><option value="57">1944</option><option value="58">1943</option><option value="59">1942</option><option value="60">1941</option><option value="61">1940</option><option value="62">1939</option><option value="63">1938</option><option value="64">1937</option><option value="65">1936</option><option value="66">1935</option><option value="67">1934</option><option value="68">1933</option><option value="69">1932</option><option value="70">1931</option><option value="71">1930</option><option value="72">1929</option><option value="73">1928</option><option value="74">1927</option><option value="75">1926</option><option value="76">1925</option><option value="77">1924</option><option value="78">1923</option><option value="79">1922</option><option value="80">1921</option><option value="81">1920</option></select>
+              <select required id="months" class="custom-select" required="true" date="true" name="month"><option value="0" selected="selected">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">Sept</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
+              <select required id="days" class="custom-select" required="true" date="true" name="day"><option value="0" selected="selected">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select> <br>
+              <input name="register_button" type="submit" value="Sign up" class="btn btn-primary btn-lg btn-block">
+              <?php if(in_array("<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>", $error_array)) echo "<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>"; ?>
+					<a href="#" id="signin" class="signin">Already have an account? Sign in here!</a>                     
+  </form>
+        </div>
                           
                 
                 <h4 id="two"> </h4>
