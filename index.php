@@ -253,7 +253,7 @@ require 'includes/form_handlers/register_handler.php';///link dyal register
                                       <p>© 2019 MEET GAMERS LLC</p>
                                       </div>
                                        <div class="col-sm-2">
-                                         <a href="#">Contact Us</a>
+                                       <a href="downbar/Contact_Us.html" target="_blank">Contact Us</a>
                                         
                                       </div>
                                       <div class="col-sm-2">
