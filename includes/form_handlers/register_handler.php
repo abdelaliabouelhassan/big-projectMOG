@@ -14,7 +14,36 @@ $day="";///nhar litzad fih
 $error_array = array(); //Holds error messages
 
 if(isset($_POST['register_button'])){
-    
+    ////kan3mr Registration form values
+	$gender=strip_tags($_POST['reg_Gender']);//Remove html tags
+	$_SESSION['reg_Gender'] = $gender; //Stores gender into session variable
+	$year = strip_tags($_POST['reg_year']);//Remove html tags
+	$_SESSION['reg_year'] = $year; //Stores  into session variable
+	$month = strip_tags($_POST['reg_month']);//Remove html tags
+	$_SESSION['reg_month'] = $month; //Stores month into session variable
+	$day = strip_tags($_POST['reg_day']);//Remove html tags
+	$_SESSION['reg_day'] = $day;//Stores day into session variable
+
+	/////////chart dyal error lakan year ou day ou gender khawyin i3tih error msg
+
+
+  if($gender=="0"){
+	array_push($error_array, "wtfffffffff<br>");
+  }
+
+   if($month=="0"){
+	array_push($error_array, "wtfffffffff<br>"); 
+   }
+
+
+   if($day=="0"){
+	array_push($error_array, "wtfffffffff<br>");
+   }
+
+
+   if($year=="0"){
+	array_push($error_array, "wtfffffffff<br>");
+   }
 
     //Registration form values
 
@@ -138,7 +167,7 @@ if(isset($_POST['register_button'])){
 
 
 
-		$query = mysqli_query($con, "INSERT INTO users VALUES ('', '$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')");
+		$query = mysqli_query($con, "INSERT INTO users VALUES ('', '$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic', 'no', '$gender', '$year', '$month','$day','0')");
 
 		array_push($error_array, "<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>");
 
@@ -147,6 +176,10 @@ if(isset($_POST['register_button'])){
 		$_SESSION['reg_lname'] = "";
 		$_SESSION['reg_email'] = "";
 		$_SESSION['reg_email2'] = "";
+		$_SESSION['reg_Gender'] =""; 
+	    $_SESSION['reg_year'] = "";
+	    $_SESSION['reg_month'] = ""; 
+	    $_SESSION['reg_day'] = "";
 	}
 
 

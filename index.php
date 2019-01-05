@@ -103,17 +103,18 @@ require 'includes/form_handlers/register_handler.php';///link dyal register
                             <!-- register form -->
 
 
-     <form action="#" method="POST">
+     <form action="" method="POST">
 
 
              <p>register to get started!</p>
+             <?php if(in_array("<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>", $error_array)) echo "<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>"; ?>
            <input type="text" name="reg_fname" placeholder="First Name" value="<?php 
 					if(isset($_SESSION['reg_fname'])) {
 						echo $_SESSION['reg_fname'];
 					} 
 					?>" required>
 					<br>
-					<?php if(in_array("Your first name must be between 2 and 25 characters<br>", $error_array)) echo "Your first name must be between 2 and 25 characters<br>"; ?>
+					<?php if(in_array("Your first name must be between 2 and 25 characters<br>", $error_array)) echo "<span style='color: #ed3228;'>Your Fast name must be between 2 and 25 characters</span><br>"; ?>
 					
 					
 					<input type="text" name="reg_lname" placeholder="Last Name" value="<?php 
@@ -122,7 +123,7 @@ require 'includes/form_handlers/register_handler.php';///link dyal register
 					} 
 					?>" required>
 					<br>
-					<?php if(in_array("Your last name must be between 2 and 25 characters<br>", $error_array)) echo "Your last name must be between 2 and 25 characters<br>"; ?>
+					<?php if(in_array("Your last name must be between 2 and 25 characters<br>", $error_array)) echo"<span style='color: #ed3228;'>Your last name must be between 2 and 25 characters</span><br>"; ?>
 
 					<input type="email" name="reg_email" placeholder="Email" value="<?php 
 					if(isset($_SESSION['reg_email'])) {
@@ -137,29 +138,40 @@ require 'includes/form_handlers/register_handler.php';///link dyal register
 					} 
 					?>" required>
 					<br>
-					<?php if(in_array("Email already in use<br>", $error_array)) echo "Email already in use<br>"; 
-					else if(in_array("Invalid email format<br>", $error_array)) echo "Invalid email format<br>";
-					else if(in_array("Emails don't match<br>", $error_array)) echo "Emails don't match<br>"; ?>
+					<?php if(in_array("Email already in use<br>", $error_array)) echo"<span style='color: #ed3228;'>Email already in use</span><br>"; 
+					else if(in_array("Invalid email format<br>", $error_array)) echo"<span style='color: #ed3228;'>Invalid email format</span><br>";
+					else if(in_array("Emails don't match<br>", $error_array)) echo"<span style='color: #ed3228;'>Emails don't match</span><br>"; ?>
 
 
 					<input type="password" name="reg_password" placeholder="Password" required>
 					<br>
 					<input type="password" name="reg_password2" placeholder="Confirm Password" required>
 					<br>
-					<?php if(in_array("Your passwords do not match<br>", $error_array)) echo "Your passwords do not match<br>"; 
-					else if(in_array("Your password can only contain english characters or numbers<br>", $error_array)) echo "Your password can only contain english characters or numbers<br>";
-					else if(in_array("Your password must be betwen 5 and 30 characters<br>", $error_array)) echo "Your password must be betwen 5 and 30 characters<br>"; ?>
-               <select class="custom-select" id="" required>
-               <option selected>Your Gender</option>
-                <option value="1">male</option>
-                  <option value="2">female</option>
+					<?php if(in_array("Your passwords do not match<br>", $error_array)) echo"<span style='color: #ed3228;'>Your passwords do not match</span><br>"; 
+					else if(in_array("Your password can only contain english characters or numbers<br>", $error_array)) echo"<span style='color: #ed3228;'>Your password can only contain english characters or numbers</span><br>";
+					else if(in_array("Your password must be betwen 5 and 30 characters<br>", $error_array)) echo"<span style='color: #ed3228;'>Your password must be betwen 5 and 30 characters</span><br>";?>
+               <select class="custom-select"  name="reg_Gender" required >
+               <option selected value="0">Your Gender</option>
+                <option value="male">male</option>
+                  <option value="female">female</option>
                   </select><br>
-                                                    
-               <select required id="years" class="custom-select" required="true" date="true" name="year"><option value="0" selected="selected">Year</option><option value="1">2000</option><option value="2">1999</option><option value="3">1998</option><option value="4">1997</option><option value="5">1996</option><option value="6">1995</option><option value="7">1994</option><option value="8">1993</option><option value="9">1992</option><option value="10">1991</option><option value="11">1990</option><option value="12">1989</option><option value="13">1988</option><option value="14">1987</option><option value="15">1986</option><option value="16">1985</option><option value="17">1984</option><option value="18">1983</option><option value="19">1982</option><option value="20">1981</option><option value="21">1980</option><option value="22">1979</option><option value="23">1978</option><option value="24">1977</option><option value="25">1976</option><option value="26">1975</option><option value="27">1974</option><option value="28">1973</option><option value="29">1972</option><option value="30">1971</option><option value="31">1970</option><option value="32">1969</option><option value="33">1968</option><option value="34">1967</option><option value="35">1966</option><option value="36">1965</option><option value="37">1964</option><option value="38">1963</option><option value="39">1962</option><option value="40">1961</option><option value="41">1960</option><option value="42">1959</option><option value="43">1958</option><option value="44">1957</option><option value="45">1956</option><option value="46">1955</option><option value="47">1954</option><option value="48">1953</option><option value="49">1952</option><option value="50">1951</option><option value="51">1950</option><option value="52">1949</option><option value="53">1948</option><option value="54">1947</option><option value="55">1946</option><option value="56">1945</option><option value="57">1944</option><option value="58">1943</option><option value="59">1942</option><option value="60">1941</option><option value="61">1940</option><option value="62">1939</option><option value="63">1938</option><option value="64">1937</option><option value="65">1936</option><option value="66">1935</option><option value="67">1934</option><option value="68">1933</option><option value="69">1932</option><option value="70">1931</option><option value="71">1930</option><option value="72">1929</option><option value="73">1928</option><option value="74">1927</option><option value="75">1926</option><option value="76">1925</option><option value="77">1924</option><option value="78">1923</option><option value="79">1922</option><option value="80">1921</option><option value="81">1920</option></select>
-              <select required id="months" class="custom-select" required="true" date="true" name="month"><option value="0" selected="selected">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">Sept</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
-              <select required id="days" class="custom-select" required="true" date="true" name="day"><option value="0" selected="selected">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select> <br>
+                  <?php
+                   if(in_array("wtfffffffff<br>",$error_array))echo "<span style='color: #ed3228;'>Fill your Gender!</span><br>"
+               ?>                       
+               <select  id="years" class="custom-select" required="true" date="true" name="reg_year"><option value="0" selected="selected">Year</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="67">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option></select><br>
+               <?php
+                   if(in_array("wtfffffffff<br>",$error_array))echo "<span style='color: #ed3228;'>You Should Fill This!</span><br>"
+               ?>
+              <select  id="months" class="custom-select" required="true" date="true" name="reg_month"><option value="0" selected="selected">Month</option><option value="January">January</option><option value="February">February</option><option value="March">March</option><option value="April">April</option><option value="May">May</option><option value="June">June</option><option value="July">July</option><option value="August">August</option><option value="Sept">Sept</option><option value="October">October</option><option value="November">November</option><option value="December">December</option></select><br>
+              <?php
+                   if(in_array("wtfffffffff<br>",$error_array))echo "<span style='color: #ed3228;'>You Should Fill This!</span><br>"
+               ?>
+              <select required id="days" class="custom-select" required="true" date="true" name="reg_day"><option value="0" selected="selected">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><br>
+              <?php
+                   if(in_array("wtfffffffff<br>",$error_array))echo "<span style='color: #ed3228;'>You Should Fill This!</span><br>"
+               ?>
               <input name="register_button" type="submit" value="Sign up" class="btn btn-primary btn-lg btn-block">
-              <?php if(in_array("<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>", $error_array)) echo "<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>"; ?>
+              
 					<a href="#" id="signin" class="signin">Already have an account? Sign in here!</a>                     
   </form>
         </div>
