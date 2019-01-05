@@ -2,6 +2,7 @@
 
 require 'config/config.php';///link dyal mysqli
 require 'includes/form_handlers/register_handler.php';///link dyal register
+require 'includes/form_handlers/login_handler.php';///link dyal login
  
  ?>
 <!DOCTYPE html>
@@ -86,10 +87,15 @@ require 'includes/form_handlers/register_handler.php';///link dyal register
 
                <div class="login">
                   <p>Login to get started!</p> 
-                  <form action="#" method="POST">
-                    <input type="email" name="" id="" placeholder="Email" required>
-                    <input type="password" name="" id="" placeholder="password" required><br>
-                    <input type="submit" value="Log In" class="btn btn-outline-primary" required><br>
+                  <form action="index.php" method="POST">
+                    <input type="email" name="log_email" id="" placeholder="Email"  value="<?php 
+					if(isset($_SESSION['log_email'])) {
+						echo $_SESSION['log_email'];
+					} 
+					?>" required>
+                    <input type="password" name="log_password" id="" placeholder="password" required><br>
+                    <?php if(in_array("Email or password was incorrect<br>", $error_array)) echo"<span style='color: #ed3228;'>Email or password was incorrect</span><br>";?>
+                    <input name="login_button" type="submit" value="Log In" class="btn btn-outline-primary" required><br>
                     <a href="#">Forgot your password?</a>
                     </form>
                </div>
@@ -103,7 +109,7 @@ require 'includes/form_handlers/register_handler.php';///link dyal register
                             <!-- register form -->
 
 
-     <form action="" method="POST">
+     <form action="index.php" method="POST">
 
 
              <p>register to get started!</p>
