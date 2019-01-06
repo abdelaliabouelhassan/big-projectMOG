@@ -275,7 +275,7 @@ require 'includes/form_handlers/login_handler.php';///link dyal login
                                         
                                       </div>
                                       <div class="col-sm-2">
-                                        <a href="#">Privacy Policy</a>
+                                        <a href="downbar/Privacy_Policy.html">Privacy Policy</a>
                                       </div>
                                       <div class="col-sm-2">
                                         <a href="#">Support</a>
