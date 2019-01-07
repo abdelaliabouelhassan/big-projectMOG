@@ -271,7 +271,7 @@ require 'includes/form_handlers/login_handler.php';///link dyal login
                                       <p>© 2019 MEET GAMERS LLC</p>
                                       </div>
                                        <div class="col-sm-2">
-                                       <a href="downbar/Contact_Us.html" target="_blank">Contact Us</a>
+                                       <a href="downbar/Contact_Us.php" target="_blank">Contact Us</a>
                                         
                                       </div>
                                       <div class="col-sm-2">

@@ -12,6 +12,10 @@ $year="";//l3am litzad fih
 $month="";//chhar litzad fih
 $day="";///nhar litzad fih
 $error_array = array(); //Holds error messages
+$emto="";
+$lmawdo3="thx for register in meet gamers";
+$l3onwan="meet gamers confirm msg";
+$emmg="From: abdelaliabouelhassan@gmail.com";
 
 if(isset($_POST['register_button'])){
     ////kan3mr Registration form values
@@ -78,8 +82,17 @@ if(isset($_POST['register_button'])){
 
 	$date = date("Y-m-d"); //Current date
 
+	
+	///virefecation email 
+    //  if (mail($em,$l3onwan,$lmawdo3,$emmg)) {
+	// 	array_push($error_array, "email send go check in you email<br>");
+	//  }
+	//  else{
+	// 	array_push($error_array, "this email does not exist<br>");
+	//  }
 
-   
+
+	
 	if($em == $em2) {
 		//Check if email is in valid format 
 		if(filter_var($em, FILTER_VALIDATE_EMAIL)) {
